@@ -216,7 +216,7 @@ func Greater(t TestingT, e1 interface{}, e2 interface{}, msgAndArgs ...interface
 	}
 
 	if res != -1 {
-		return Fail(t, fmt.Sprintf("\"%s\" is not greater than \"%s\"", e1, e2), msgAndArgs...)
+		return Fail(t, fmt.Sprintf("\"%v\" is not greater than \"%v\"", e1, e2), msgAndArgs...)
 	}
 
 	return true
@@ -245,7 +245,7 @@ func GreaterOrEqual(t TestingT, e1 interface{}, e2 interface{}, msgAndArgs ...in
 	}
 
 	if res != -1 && res != 0 {
-		return Fail(t, fmt.Sprintf("\"%s\" is not greater or equal than \"%s\"", e1, e2), msgAndArgs...)
+		return Fail(t, fmt.Sprintf("\"%v\" is not greater or equal than \"%v\"", e1, e2), msgAndArgs...)
 	}
 
 	return true
@@ -273,7 +273,7 @@ func Less(t TestingT, e1 interface{}, e2 interface{}, msgAndArgs ...interface{})
 	}
 
 	if res != 1 {
-		return Fail(t, fmt.Sprintf("\"%s\" is not less than \"%s\"", e1, e2), msgAndArgs...)
+		return Fail(t, fmt.Sprintf("\"%v\" is not less than \"%v\"", e1, e2), msgAndArgs...)
 	}
 
 	return true
@@ -302,7 +302,7 @@ func LessOrEqual(t TestingT, e1 interface{}, e2 interface{}, msgAndArgs ...inter
 	}
 
 	if res != 1 && res != 0 {
-		return Fail(t, fmt.Sprintf("\"%s\" is not less or equal than \"%s\"", e1, e2), msgAndArgs...)
+		return Fail(t, fmt.Sprintf("\"%v\" is not less or equal than \"%v\"", e1, e2), msgAndArgs...)
 	}
 
 	return true
